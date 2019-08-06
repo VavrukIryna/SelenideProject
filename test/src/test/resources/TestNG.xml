@@ -3,8 +3,7 @@
 <suite name="Google tests Test Suite" parallel="tests" thread-count="1">
     <test name="checkSearchingWordAtGoogle">
         <classes>
-            <class name="GoogleTest"/>
-            <class name="GmailTest"/>
+            <class name="TestRunner"/>
         </classes>
     </test>
 </suite>

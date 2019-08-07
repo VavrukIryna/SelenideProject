@@ -1,8 +1,9 @@
 package steps;
 
-import cucumber.api.java.en.Given;
-import cucumber.api.java.en.Then;
-import cucumber.api.java.en.When;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import io.cucumber.java.en.And;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.testng.Assert;
@@ -33,12 +34,15 @@ public class GmailStepTest {
     @Given("^open gmail page$")
     public void openGmailPage() {
         open("http://gmail.com");
-       // Assert.assertEquals(title().toLowerCase(), "gmail.com");
+        sleep(20000);
     }
+
     @When("^user enter login \"([^\"]*)\"$")
     public void userEnterLogin(String login){
-        $(By.xpath("//input[@type ='email']]")).setValue(login);
-        $(By.xpath("//*[text() ='Next']]")).click();
+        sleep(2000);
+        $(By.xpath("//*[@type ='email']")).setValue(login);
+        sleep(2000);
+        $(By.xpath("//*[@id=\"identifierNext\"]")).click();
     }
 
     @Then("^login is entered$")
@@ -49,12 +53,24 @@ public class GmailStepTest {
 
     @When("^user enter password \"([^\"]*)\"$")
     public void userEnterPassword(String password){
-        $(By.xpath("//input[@type ='password']]")).setValue(password);
-        $(By.xpath("//*[text() ='Next']]")).click();
+        $(By.xpath("//input[@type ='password']")).setValue(password);
+        $(By.xpath("//*[@id=\"passwordNext\"]")).click();
     }
     @Then("^password is entered$")
     public void passwordIsEntered(){
         //todo add asserts
     }
+    @And("^user login to gmail$")
+    public void userLoginToGmail(){
+        //todo add asserts
+    }
+    @When  ("^user click to compose button$")
+    public void userClickToComposeButton(){
+        //todo add some staff
+    }
 
+    @Then ("^new message Window is entered$")
+    public void   newMessageWindowIsEntered(){
+        //todo add smth
+    }
 }

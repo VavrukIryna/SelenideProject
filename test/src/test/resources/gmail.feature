@@ -6,6 +6,7 @@ Feature: Test with gmail
     Then login is entered
     When user enter password "<password>"
     Then password is entered
+    And user login to gmail
     Examples:
       | login| password|
       |test.iryna.mail|testmail|

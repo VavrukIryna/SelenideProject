@@ -3,10 +3,8 @@ Feature: Test with gmail
   Scenario Outline: login in gmail
     Given open gmail page
     When user enter login "<login>"
-    Then login is entered
-    When user enter password "<password>"
-    Then password is entered
-    And user login to gmail
+    And user enter password "<password>"
+    Then user login to gmail
     Examples:
       | login| password|
       |test.iryna.mail|testmail|
@@ -15,10 +13,8 @@ Feature: Test with gmail
   Scenario Outline: enter message at gmail
     Given open gmail page
     When user enter login "<login>"
-    Then login is entered
-    When user enter password "<password>"
-    Then password is entered
-    And user login to gmail
+    And user enter password "<password>"
+    Then user login to gmail
     When  user click to compose button
     Then new message Window is entered
 

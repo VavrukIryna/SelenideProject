@@ -11,8 +11,6 @@
     <name>mentoringProject</name>
 
     <modules>
-        <module>core</module>
-        <module>business</module>
         <module>test</module>
     </modules>
     <build>

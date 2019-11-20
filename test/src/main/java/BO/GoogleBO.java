@@ -1,6 +1,6 @@
 package BO;
 
-import PO.GooglePO;
+import core.PO.GooglePO;
 
 public class GoogleBO {
 

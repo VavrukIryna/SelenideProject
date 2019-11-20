@@ -1,8 +1,8 @@
 package BO;
 
-import PO.LoginGmailPO;
-import PO.MailGmailPO;
-import PO.PasswordGmailPO;
+import core.PO.LoginGmailPO;
+import core.PO.MailGmailPO;
+import core.PO.PasswordGmailPO;
 
 public class GmailBO {
     private LoginGmailPO loginPO = new LoginGmailPO();
